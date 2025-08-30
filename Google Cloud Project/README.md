@@ -1,23 +1,48 @@
-# Google-Cloud-Server-Project
+# ☁️ Google Cloud Data Engineering Project
 
-Fraud Detection Project
+This project demonstrates the use of **Google Cloud Platform (GCP)** for data engineering workflows.  
+It focuses on building a pipeline for data ingestion, transformation, and analysis in the cloud.  
 
-Class: CIS 415 - Arizona State University
+---
 
-Summary
+## 🚀 Project Overview
+- **Platform:** Google Cloud Platform (GCP)  
+- **Services Used:** (update with specifics, e.g., BigQuery, Cloud Storage, Dataflow, Pub/Sub, AI Platform)  
+- **Goal:** To process and analyze data at scale using cloud-native tools.  
 
-This project focused on using Google Cloud Platform (GCP) and PySpark to build and evaluate machine learning models, specifically Logistic Regression and Random Forest, for detecting and predicting fraud in large datasets.
+---
 
-Description
+## 🛠 Workflow
+1. **Data Ingestion** – Loading raw data into Google Cloud Storage / BigQuery  
+2. **Data Transformation** – Cleaning, preprocessing, and feature engineering  
+3. **Analysis / ML** – Running queries, analytics, or ML training (depending on scope)  
+4. **Visualization** – Creating charts or dashboards (if included)  
 
-For this project, I created two datasets: big_fraud_detection_dataset and small_fraud_detection_dataset, both generated with the help of ChatGPT. Due to its size, the large dataset is not included in this repository.
+---
 
-Workflow:
+## 📊 Example Results
+- Successfully loaded data into BigQuery tables  
+- Performed transformations with SQL / Python APIs  
+- (Add a quick result summary here, e.g., insights, aggregated metrics, or ML outputs)  
 
-	•	GCP Setup: I used professor-provided code to connect to GCP Cloud Storage, then customized it to integrate with my own buckets. I validated PySpark functionality in Google Colab before transitioning to Dataproc Jupyter.
-	•	Data Issues and Resolution: During the Spark conversion, I encountered missing values that were not expected. By dropping rows with missing data, I successfully converted the dataset to Spark format.
-	•	Model Development: I processed the data using text prompts and built both Logistic Regression and Random Forest models. I compared their performance to determine the best predictor for fraud cases.
-	•	Scaling: After testing on the small dataset, I deployed the same code to GCP Dataproc for larger-scale processing.
+---
 
-This project strengthened my skills in cloud-based machine learning, PySpark, and troubleshooting data issues in a distributed environment.
+## ⚙️ Tools & Libraries
+- **Python 3.x**  
+- Jupyter Notebook  
+- `google-cloud` Python SDK  
+- pandas / NumPy (data wrangling)  
+- (Add others if you used them, e.g., TensorFlow, scikit-learn)  
 
+---
+
+## 📌 Files
+- `Google Cloud Project.ipynb` → main notebook with pipeline + analysis  
+- (Add additional files here, e.g., SQL queries, configs, datasets)  
+
+---
+
+## 🔮 Next Steps
+- Automate pipeline with **Cloud Composer (Airflow)**  
+- Add monitoring / logging for production use  
+- Scale dataset size and performance test queries  
