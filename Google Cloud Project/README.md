@@ -1,64 +1,60 @@
-# ☁️ Google Cloud Fraud Detection Project
+# ☁️ Fraud Detection on GCP with PySpark
 
-This project demonstrates the use of **Google Cloud Platform (GCP)** and **PySpark** to build and evaluate machine learning models for fraud detection on large datasets.  
-It highlights skills in cloud data engineering, distributed ML, and troubleshooting data issues in a production-like environment.  
-
----
-
-## 📊 Project Overview
-- **Course:** CIS 415 – Arizona State University  
-- **Topic:** Fraud Detection using GCP + PySpark  
-- **Goal:** Detect and predict fraud cases efficiently on large-scale data using cloud-native tools.  
+> Arizona State University · CIS 415 · Big Data Analytics
 
 ---
 
-## 🛠 Workflow
-1. **GCP Setup**  
-   - Connected to Google Cloud Storage with professor-provided code (customized for personal buckets).  
-   - Validated PySpark in Google Colab, then transitioned to **GCP Dataproc Jupyter** for distributed computing.  
+## 📌 Overview
 
-2. **Data Preparation**  
-   - Created two datasets:  
-     - `big_fraud_detection_dataset` (large, not included in repo due to size)  
-     - `small_fraud_detection_dataset` (included for testing and reproducibility)  
-   - Encountered unexpected missing values during Spark conversion.  
-   - Resolved by dropping problematic rows → successfully converted to Spark DataFrames.  
+Fraud detection pipeline built with **PySpark MLlib** and deployed on **Google Cloud Dataproc**. The project follows industry best practice — prototype locally on a small dataset, validate logic, then scale to production-size data in the cloud.
 
-3. **Model Development**  
-   - Implemented **Logistic Regression** and **Random Forest** in PySpark MLlib.  
-   - Trained, evaluated, and compared models to determine which performed best for fraud detection.  
-
-4. **Scaling**  
-   - Prototyped on the small dataset.  
-   - Deployed the same pipeline on **GCP Dataproc** to handle larger-scale processing.  
+| Metric | Value |
+|--------|-------|
+| Records processed | 999,001 |
+| Models compared | 2 |
+| Best performer | Random Forest |
 
 ---
 
-## 📈 Example Results
-- Successfully ingested and transformed data into Spark format.  
-- Both models were evaluated for predictive performance.  
-- Random Forest outperformed Logistic Regression in fraud detection accuracy (details in notebook).  
+## 🔄 Workflow
+
+**Phase 1 — Local / Colab**
+Build and validate the fraud detection pipeline on a small dataset, ensuring logic and models work correctly before scaling.
+
+**Phase 2 — GCP Dataproc**
+Deploy the same pipeline to Google Cloud Platform, processing 999,001 transaction records on a distributed cluster.
 
 ---
 
-## ⚙️ Tools & Technologies
-- **Google Cloud Platform (GCP)** – Cloud Storage, Dataproc  
-- **PySpark (MLlib)** – Distributed data processing and ML  
-- **Python 3.x**  
-- **Jupyter Notebook / Colab**  
-- pandas, NumPy (preprocessing)  
+## 🛠 Stack
+
+- **Google Cloud Platform** — Dataproc, Cloud Storage
+- **PySpark MLlib** — Logistic Regression, Random Forest
+- **Python 3** — pandas, NumPy
+- **Google Colab** — development environment
 
 ---
 
-## 📌 Files
-- `Google Cloud Project.ipynb` → main notebook with GCP + PySpark workflow  
-- `small_fraud_detection_dataset.csv` → test dataset  
-- (Large dataset omitted due to file size restrictions)  
+## 📈 Results
+
+- Successfully ingested and processed **999,001 transaction records** on GCP Dataproc
+- Random Forest outperformed Logistic Regression on fraud detection tasks
+- Pipeline validated on small dataset before scaling to full production-size data
 
 ---
 
-## 🔮 Next Steps
-- Automate pipeline deployment with **Cloud Composer (Airflow)**  
-- Add monitoring and logging for production scenarios  
-- Experiment with additional ML models (e.g., Gradient Boosted Trees, XGBoost on Spark)  
-- Perform hyperparameter tuning for Random Forest at scale  
+## ⚙️ Setup
+
+> This notebook requires a GCP account with Dataproc and Cloud Storage configured.
+> Replace `YOUR_GCP_PROJECT_ID` and `YOUR_GCS_BUCKET_NAME` in the config cell with your own credentials.
+> The small dataset is included for local testing without GCP setup.
+
+---
+
+## 📁 Files
+
+| File | Description |
+|------|-------------|
+| `Google_Cloud_Project.ipynb` | Main notebook |
+| `small_fraud_detection_dataset.csv` | Included for local testing |
+| `big_fraud_detection_dataset.csv` | Omitted — too large for repo |
