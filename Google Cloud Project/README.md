@@ -1,4 +1,9 @@
-# ☁️ Fraud Detection on GCP with PySpark
+<div style="display: flex; align-items: center; gap: 12px;">
+    <a href="https://cloud.google.com" target="_blank" rel="noreferrer">
+        <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="45" height="45"/>
+    </a>
+    <h1 style="margin: 0;">Fraud Detection on GCP with PySpark</h1>
+</div>
 
 > Arizona State University · CIS 415 · Big Data Analytics
 
